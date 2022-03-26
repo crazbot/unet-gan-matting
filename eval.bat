@@ -1,0 +1,1 @@
+python eval.py data/matting/input/0_9.jpg data/matting/trimap/0_trimap.jpg output --checkpoint -1

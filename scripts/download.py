@@ -8,6 +8,8 @@ def dowload_matting_dataset(output_dir):
     if not os.path.isdir(output_dir):
         os.makedirs(output_dir)
 
+    proxy="127.0.0.1:10808"
+
     response = google_images_download.googleimagesdownload()
     response.download({
         "keywords": "portrait transparent background",
@@ -15,7 +17,8 @@ def dowload_matting_dataset(output_dir):
         "size": "medium",
         "limit": 500,
         "output_directory": output_dir,
-        "chromedriver": "/usr/local/bin/chromedriver"})
+        # "proxy": proxy,
+        "chromedriver": "C:\\chromedriver.exe"})
 
     response = google_images_download.googleimagesdownload()
     response.download({
@@ -24,7 +27,8 @@ def dowload_matting_dataset(output_dir):
         "size": "medium",
         "limit": 500,
         "output_directory": output_dir,
-        "chromedriver": "/usr/local/bin/chromedriver"})
+        # "proxy": proxy,
+        "chromedriver": "C:\\chromedriver.exe"})
 
 if __name__ == "__main__":
     output_dir = os.path.join("data", "matting")

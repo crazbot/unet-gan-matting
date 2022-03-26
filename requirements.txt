@@ -1,5 +1,5 @@
-Pillow >= 5.0.0
-tensorflow >= 1.7
+Pillow == 5.0.0
+tensorflow == 1.7
 numpy
 google_images_download
-opencv-python
+opencv-python == 3.4.15.55
